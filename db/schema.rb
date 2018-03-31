@@ -12,24 +12,26 @@
 
 ActiveRecord::Schema.define(version: 3) do
 
-  create_table "costumes", force: :cascade do |t|
-    t.string "name"
-    t.float "price"
-    t.string "size"
-    t.string "url"
-  end
-
-  create_table "costumez_store", force: :cascade do |t|
+  create_table "costume_stores", force: :cascade do |t|
     t.string "name"
     t.string "location"
-    t.integer "inventory"
+    t.integer "costume_inventory"
     t.integer "employees"
     t.boolean "open"
     t.datetime "opening"
     t.datetime "closing"
   end
 
-  create_table "haunted_house", force: :cascade do |t|
+  create_table "costumes", force: :cascade do |t|
+    t.string "name"
+    t.float "price"
+    t.string "size"
+    t.string "image_url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "haunted_houses", force: :cascade do |t|
     t.string "name"
     t.string "location"
     t.string "theme"
