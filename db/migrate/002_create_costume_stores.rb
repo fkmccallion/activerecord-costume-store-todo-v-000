@@ -11,5 +11,5 @@ class CreateCostumeStores < ActiveRecord::Migration[5.1]
       t.datetime :closing
     end
   end
-  
+
 end
